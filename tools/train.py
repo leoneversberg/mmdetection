@@ -17,6 +17,9 @@ from mmdet.datasets import build_dataset
 from mmdet.models import build_detector
 from mmdet.utils import collect_env, get_root_logger
 
+import sys
+sys.path.append(os.path.join(sys.path[0],'../my_pipelines'))
+from data_augmentation import MyDataAugmentation, PencilFilter
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Train a detector')

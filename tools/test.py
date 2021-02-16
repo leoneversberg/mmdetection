@@ -14,7 +14,9 @@ from mmdet.apis import multi_gpu_test, single_gpu_test
 from mmdet.datasets import (build_dataloader, build_dataset,
                             replace_ImageToTensor)
 from mmdet.models import build_detector
-
+import sys
+sys.path.append(os.path.join(sys.path[0],'../my_pipelines'))
+from data_augmentation import MyDataAugmentation, PencilFilter
 
 def parse_args():
     parser = argparse.ArgumentParser(
